@@ -5,9 +5,9 @@
 }
 
 body {
-  background: #050505;
+  background: #05070d;
   font-family: 'Inter', sans-serif;
-  color: white;
+  color: #ffffff;
 }
 
 /* HEADER */
@@ -22,27 +22,28 @@ body {
 }
 
 .status {
-  background: linear-gradient(135deg, #ff5f6d, #ff9966);
+  background: linear-gradient(135deg, #007aff, #00c6ff);
   padding: 8px 20px;
   border-radius: 30px;
   font-weight: 600;
+  box-shadow: 0 0 12px rgba(0, 122, 255, 0.6);
 }
 
 /* MAPA */
 #map {
   height: 45vh;
-  filter: grayscale(100%) brightness(0.6);
+  filter: grayscale(100%) brightness(0.5) contrast(1.2);
 }
 
 /* PANEL */
 .panel {
-  background: #0d0d0d;
+  background: #0a0f1c;
   border-radius: 25px 25px 0 0;
   padding: 16px;
   margin-top: -30px;
   height: 55vh;
   overflow-y: auto;
-  box-shadow: 0 -10px 30px rgba(0,0,0,0.8);
+  box-shadow: 0 -10px 40px rgba(0,0,0,0.9);
 }
 
 /* TARJETAS */
@@ -51,14 +52,14 @@ body {
   border-radius: 20px;
   padding: 16px;
   margin-bottom: 14px;
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(0,255,150,0.1);
-  transition: 0.3s;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 122, 255, 0.15);
+  transition: all 0.3s ease;
 }
 
 .card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 0 15px rgba(0,255,150,0.2);
+  box-shadow: 0 0 18px rgba(0, 122, 255, 0.3);
 }
 
 /* INFO */
@@ -71,18 +72,19 @@ body {
 .tarifa {
   font-size: 24px;
   font-weight: 700;
-  color: #00ff9c;
+  color: #00c6ff;
+  text-shadow: 0 0 10px rgba(0,198,255,0.7);
 }
 
 .distancia {
   font-size: 12px;
-  color: #aaa;
+  color: #8fa3c7;
 }
 
 .direccion {
   margin-top: 8px;
   font-size: 14px;
-  color: #ddd;
+  color: #d0d8f0;
 }
 
 /* BOTONES */
@@ -94,25 +96,35 @@ body {
 
 .btn {
   flex: 1;
-  padding: 10px;
+  padding: 11px;
   border-radius: 12px;
   border: none;
-  font-weight: bold;
+  font-weight: 600;
   cursor: pointer;
-  transition: 0.2s;
+  transition: all 0.25s ease;
 }
 
+/* BOTÓN ACEPTAR (AZUL NEÓN) */
 .aceptar {
-  background: #00ff9c;
-  color: black;
-}
-
-.ofertar {
-  background: #1f1f1f;
+  background: linear-gradient(135deg, #007aff, #00c6ff);
   color: white;
+  box-shadow: 0 0 12px rgba(0, 122, 255, 0.6);
 }
 
-.btn:hover {
+.aceptar:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 122, 255, 1);
+}
+
+/* BOTÓN OFERTAR (NEGRO PREMIUM) */
+.ofertar {
+  background: #111827;
+  color: #cbd5ff;
+  border: 1px solid rgba(0, 122, 255, 0.2);
+}
+
+.ofertar:hover {
+  background: #0f172a;
   transform: scale(1.05);
 }
 
@@ -122,6 +134,6 @@ body {
 }
 
 .panel::-webkit-scrollbar-thumb {
-  background: #00ff9c;
+  background: linear-gradient(180deg, #007aff, #00c6ff);
   border-radius: 10px;
 }
