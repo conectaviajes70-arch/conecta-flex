@@ -29,6 +29,8 @@ const viajes = [
 
 
 // RENDER
+const contenedor = document.getElementById("viajes");
+
 function render() {
   contenedor.innerHTML = "";
 
@@ -36,24 +38,13 @@ function render() {
     contenedor.innerHTML += `
       <div class="card">
 
-        <div class="top">
-          <img src="${v.foto}" class="foto">
-          
-          <div class="info-user">
-            <div class="nombre">${v.nombre}</div>
-            <div class="rating">⭐ ${v.rating} • ${v.viajes} viajes</div>
-          </div>
-
+        <div class="row">
           <div class="tarifa">MXN ${v.tarifa}</div>
+          <div class="distancia">${v.distancia}</div>
         </div>
 
         <div class="direccion">${v.origen}</div>
         <div class="direccion">${v.destino}</div>
-
-        <div class="tags">
-          <span class="tag azul">Precio justo</span>
-          <span class="tag">Alta demanda</span>
-        </div>
 
         <div class="btns">
           <button class="btn aceptar" onclick="aceptar(${v.tarifa})">
@@ -81,24 +72,5 @@ function ofertar(precio) {
   let nueva = prompt("Tu oferta:");
   if(nueva){
     alert("Ofertaste MXN " + nueva);
-  }
-}
-
-let estado = "ocupado";
-
-function toggleEstado() {
-  const sw = document.getElementById("switch");
-  const texto = document.getElementById("estado-texto");
-
-  if (estado === "ocupado") {
-    estado = "disponible";
-    sw.classList.remove("ocupado");
-    sw.classList.add("disponible");
-    texto.innerText = "Disponible";
-  } else {
-    estado = "ocupado";
-    sw.classList.remove("disponible");
-    sw.classList.add("ocupado");
-    texto.innerText = "Ocupado";
   }
 }
